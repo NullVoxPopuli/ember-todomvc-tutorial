@@ -1,0 +1,53 @@
+<section class='todoapp'>
+  <h1>todos</h1>
+  <input
+    class='new-todo'
+    placeholder='What needs to be done?'
+    autofocus
+  >
+
+  <section class='main'>
+    <input id='mark-all-complete' class='toggle-all' type='checkbox'>
+    <label for='mark-all-complete'>Mark all as complete</label>
+
+    <ul class='todo-list'>
+      <li>
+        <div class='view'>
+          <input class='toggle' type='checkbox'>
+          <label>Buy Movie Tickets</label>
+          <button type='button' class='destroy'></button>
+        </div>
+
+        <input autofocus class='edit' value='Todo Text'>
+      </li>
+
+      <li>
+        <div class='view'>
+          <input class='toggle' type='checkbox'>
+          <label>Go to Movie</label>
+          <button type='button' class='destroy'></button>
+        </div>
+
+        <input autofocus class='edit' value='Todo Text'>
+      </li>
+    </ul>
+  </section>
+
+  <footer class='footer'>
+    <span class='todo-count'>
+      <strong>0</strong> todos left
+    </span>
+
+    <ul class='filters'>
+      <li>
+        <a href='#'>All</a>
+        <a href='#'>Active</a>
+        <a href='#'>Completed</a>
+      </li>
+    </ul>
+
+    <button type='button' class='clear-completed'>
+      Clear Completed
+    </button>
+  </footer>
+</section>
