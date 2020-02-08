@@ -1,6 +1,6 @@
 <footer class='footer'>
   <span class='todo-count'>
-    <strong>0</strong> todos left
+    <strong>{{this.todos.incomplete.length}}</strong> todos left
   </span>
 
   <ul class='filters'>
@@ -11,7 +11,11 @@
     </li>
   </ul>
 
-  <button type='button' class='clear-completed'>
+  <button
+    type='button'
+    class='clear-completed'
+    {{on 'click' this.todos.clearCompleted}}
+  >
     Clear Completed
   </button>
 </footer>

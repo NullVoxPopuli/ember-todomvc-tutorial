@@ -18,10 +18,21 @@ export default class TodoDataService extends Service {
     return this.todos;
   }
 
+  get incomplete() {
+    return this.todos.filter(todo => {
+      return todo.isCompleted === false;
+    });
+  }
+
   @action
   add(text) {
     let newTodo = new Todo(text);
 
     this.todos = [...this.todos, newTodo];
+  }
+
+  @action
+  clearCompleted() {
+    this.todos = this.incomplete;
   }
 }
