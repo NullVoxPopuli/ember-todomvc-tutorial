@@ -3,7 +3,8 @@
   <label for='mark-all-complete'>Mark all as complete</label>
 
   <ul class='todo-list'>
-    <Todo />
-    <Todo />
+    {{#each this.todos.all as |todo|}}
+      <Todo @todo={{todo}} />
+    {{/each}}
   </ul>
 </section>

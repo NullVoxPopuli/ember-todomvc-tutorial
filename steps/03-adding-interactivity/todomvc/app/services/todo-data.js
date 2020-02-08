@@ -14,10 +14,14 @@ class Todo {
 export default class TodoDataService extends Service {
   @tracked todos = [];
 
+  get all() {
+    return this.todos;
+  }
+
   @action
   add(text) {
     let newTodo = new Todo(text);
 
-    this.data = [...this.todos, newTodo];
+    this.todos = [...this.todos, newTodo];
   }
 }
