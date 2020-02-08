@@ -1,9 +1,15 @@
-<li>
+<li class='{{if @todo.isCompleted "completed"}}'>
   <div class='view'>
-    <input class='toggle' type='checkbox'>
+    <input
+      class='toggle'
+      type='checkbox'
+      checked={{@todo.isCompleted}}
+      {{on 'change' (fn this.todos.toggleCompletion @todo)}}
+    >
     <label>{{@todo.text}}</label>
     <button type='button' class='destroy'></button>
   </div>
 
   <input autofocus class='edit' value='Todo Text'>
-</li>
+</li
+>
