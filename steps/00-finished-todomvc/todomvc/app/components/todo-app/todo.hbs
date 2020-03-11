@@ -4,15 +4,20 @@
 '>
   <div class='view'>
     <input
+      aria-label='Toggle the completion of this todo'
       class='toggle'
       type='checkbox'
       checked={{@todo.completed}}
       {{on 'change' this.complete}}
     >
-    <label {{on 'dblclick' this.edit}}>{{@todo.title}}</label>
+    <label {{on 'dblclick' this.edit}}>
+      {{@todo.title}}
+    </label>
+
     <button
       type='button'
       class='destroy'
+      title='Remove this todo'
       {{on 'click' (fn this.todoData.remove @todo)}}
     ></button>
   </div>

@@ -1,6 +1,20 @@
 /*
   NOTE: Styles imported in ember-cli-build.js
 
-  Why? We don't need any custom CSS, nor do we need anything
-       from those files to use here (such as variables, mixins, etc)
+  Why? Styles aren't the focus of this tutorial, so most of them
+       are not included. However, the official todomvc styles
+       do not some hacky behaviors and ignore accessibility
+       practices.
+
+  To see the contents of the included CSS, look here:
+  https://github.com/tastejs/todomvc-app-css/blob/master/index.css
 */
+
+/* this block re-adds the outline, to support keyboard navigation / tabbing */
+:focus,
+.view label:focus,
+.todo-list li .toggle:focus + label,
+.toggle-all:focus + label {
+  /* !important needed, because todomvc styles deliberately disable the outline */
+  outline: #d86f95 solid !important;
+}
