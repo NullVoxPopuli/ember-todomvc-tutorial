@@ -2,6 +2,7 @@
   <h1>todos</h1>
   <input
     class='new-todo'
+    aria-label='What needs to be done?'
     placeholder='What needs to be done?'
     autofocus
   >
@@ -13,7 +14,11 @@
     <ul class='todo-list'>
       <li>
         <div class='view'>
-          <input class='toggle' type='checkbox'>
+          <input
+            aria-label='Toggle the completion of this todo'
+            class='toggle'
+            type='checkbox'
+          >
           <label>Buy Movie Tickets</label>
           <button type='button' class='destroy'></button>
         </div>
@@ -25,7 +30,11 @@
         <div class='view'>
           <input class='toggle' type='checkbox'>
           <label>Go to Movie</label>
-          <button type='button' class='destroy'></button>
+          <button
+            type='button'
+            class='destroy'
+            title='Remove this todo'
+          ></button>
         </div>
 
         <input autofocus class='edit' value='Todo Text'>
